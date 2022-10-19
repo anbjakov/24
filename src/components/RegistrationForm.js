@@ -83,7 +83,7 @@ const RegistrationForm =()=>{
              </div>
              {
                  isError.password &&  <div style={{color:"red"}}>
-                     Password length expected more than 1
+                     Password length expected not less 3
                  </div>
              }
              <div className="input-group">
@@ -98,7 +98,7 @@ const RegistrationForm =()=>{
              </div>
              {
                  isError.passConfirm &&  <div style={{color:"red"}}>
-                     length expected more than 1 and match password
+                     length expected not less 3 and match password
                  </div>
              }
          </div>
