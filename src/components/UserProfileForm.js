@@ -17,11 +17,11 @@ const UserProfileForm = ()=> {
                 <div className="input-group">
                     <span className="input-group-text w-25">
                          {
-                             errors.fName && <div><i className="bi bi-exclamation-octagon-fill text-danger"> </i></div>
+                             errors.firstName && <div><i className="bi bi-exclamation-octagon-fill text-danger"> </i></div>
                          }
                        First Name
                     </span>
-                    <input {...register("fName", {
+                    <input {...register("firstName", {
                         required: "First name is required",
                         minLength:{
                             value:3,
@@ -30,18 +30,18 @@ const UserProfileForm = ()=> {
                         ) } type="text" className="form-control" />
                 </div>
                 {
-                    errors.fName && <div style={{color:"red"}}>
-                        {errors.fName.message}
+                    errors.firstName && <div className="danger">
+                        {errors.firstName.message}
                     </div>
                 }
                 <div className="input-group">
                     <span className="input-group-text w-25">
                         {
-                            errors.lName && <div><i className="bi bi-exclamation-octagon-fill text-danger"> </i></div>
+                            errors.lastName && <div><i className="bi bi-exclamation-octagon-fill text-danger"> </i></div>
                         }
                         Last name
                     </span>
-                    <input {...register("lName", {
+                    <input {...register("lastName", {
                         required: "Second name is required",
                         minLength:{
                             value:3,
@@ -49,8 +49,8 @@ const UserProfileForm = ()=> {
                         },})} type="text" className="form-control" />
                 </div>
                 {
-                    errors.lName && <div style={{color:"red"}}>
-                        {errors.lName.message}
+                    errors.lastName && <div className="danger">
+                        {errors.lastName.message}
                     </div>
                 }
                 <div className="input-group">
@@ -68,7 +68,7 @@ const UserProfileForm = ()=> {
                 </div>
 
             </div>
-            {errors.country && <div style={{color:"red"}}>
+            {errors.country && <div className="danger">
                 {errors.country.message}
             </div>}
             <button type="submit" className="btn btn-primary mt-1 mb-1">Sign in</button>
